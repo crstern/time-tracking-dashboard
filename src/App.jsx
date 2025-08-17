@@ -22,7 +22,7 @@ function App() {
         <div className="card-header" style={{ backgroundColor: colors[index] }}>
           <img
             src={
-              "../images/icon-" +
+              "/images/icon-" +
               item["title"].toLowerCase().replace(" ", "-") +
               ".svg"
             }
@@ -32,11 +32,7 @@ function App() {
         <div className="card-details">
           <div className="title-row">
             <h2>{item["title"]}</h2>
-            <img
-              src="./images/icon-ellipsis.svg"
-              alt="el"
-              className="elipsis"
-            />
+            <img src="/images/icon-ellipsis.svg" alt="el" className="elipsis" />
           </div>
           <div className="hours-details">
             <h1>{item["timeframes"][selectedTimeframe]["current"]} hrs</h1>
@@ -55,7 +51,7 @@ function App() {
         <div className="cards-section">
           <div className="profile-section">
             <div className="profile-details">
-              <img src="../images/image-jeremy.png" alt="avatar" />
+              <img src="/images/image-jeremy.png" alt="avatar" />
               <div>
                 <p>Report for</p>
                 <h1>Jeremy Robson</h1>
