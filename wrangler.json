@@ -1,5 +1,5 @@
 {
-  "name": "your-project-name",
+  "name": "timetracking-dashboard",
   "compatibility_date": "2025-08-17",
   "assets": {
     "directory": "./dist"
