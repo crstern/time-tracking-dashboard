@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import data from "../public/data.json";
 import "./App.css";
 
 const timeframes = ["daily", "weekly", "monthly"];
@@ -12,28 +13,9 @@ const colors = [
   "hsl(43, 84%, 65%)",
 ];
 
-function TimeCard({ props }) {
-  return (
-    <div>
-      <img src="../images/icon-work.svg" alt="icon-work" />
-      <h2></h2>
-    </div>
-  );
-}
-
 function App() {
-  const [data, setData] = useState([]);
   const [selectedTimeframe, setSelectedTimeframe] = useState(timeframes[1]);
 
-  useEffect(() => {
-    axios
-      .get("../data.json")
-      .then((resp) => setData(resp.data))
-      .catch((error) => console.error(error));
-  }, []);
-  if (data.length === 0) {
-    return <h1>Loading...</h1>;
-  }
   const cards = data.map((item, index) => {
     return (
       <div className="card-element">
