@@ -1,0 +1,258 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Rubik";
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.cards-section {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 400px;
+  gap: 3em;
+}
+
+.profile-section {
+  grid-row: 1/3;
+  grid-column: 1;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+}
+
+.profile-details {
+  background-color: hsl(246, 80%, 60%);
+  padding: 2em;
+  text-align: left;
+  border-radius: 1em;
+}
+
+.profile-details h1 {
+  font-weight: 300;
+}
+
+.profile-details img {
+  width: 30%;
+  border: solid;
+  border-radius: 50%;
+}
+
+.timeframe-buttons-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-button {
+  border: none;
+  outline: none; /* Optional: removes focus outline */
+  background: none;
+  text-align: left;
+  font-weight: 400;
+  color: hsl(235, 45%, 61%);
+  padding-left: 1em;
+}
+
+.selection-button:focus {
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.timeframe-buttons-section > button {
+  padding: 1em;
+}
+
+.card-element {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1em;
+}
+
+.card-element img {
+  width: 30%;
+}
+
+.card-element * {
+  font-weight: 400;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.card-details {
+  border-radius: 1em;
+  background-color: hsl(235, 46%, 20%);
+  position: relative;
+  margin-top: -0.8em;
+}
+
+.card-header {
+  height: 3em;
+  overflow: hidden;
+  text-align: right;
+  padding-right: 2em;
+  border-radius: 1em 1em 0 0;
+}
+
+.hours-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+}
+
+.title-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 1em;
+}
+
+.title-row img {
+  width: 1.8em;
+  height: 0.4em;
+  padding-right: 1em;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@media screen and (max-width: 500px) {
+  #root {
+    padding: 0;
+    margin: 0.5em;
+    width: 80%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cards-section {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    align-items: end;
+    gap: 1em;
+    min-height: 0px;
+    width: 100%;
+  }
+
+  .profile-section {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .profile-details img {
+    width: 3em;
+    height: 3em;
+  }
+
+  h1 {
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: smaller;
+  }
+
+  .timeframe-buttons-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .selection-button {
+    font-size: 15px;
+  }
+
+  .card-details p {
+    margin: 0.5em;
+    padding-bottom: 0.3em;
+  }
+
+  .hours-details {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-right: 0.5em;
+  }
+
+  .hours-details p {
+    color: hsl(235, 45%, 61%);
+  }
+
+  .card-details {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .card-element {
+    max-height: none;
+    margin: 0;
+  }
+
+  .title-row img {
+    width: 1em;
+    height: 0.2em;
+    padding-right: 1em;
+  }
+
+  .title-row {
+    font-size: smaller;
+  }
+
+  .profile-details {
+    padding: 1em;
+  }
+}
